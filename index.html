@@ -12,10 +12,10 @@
             <label for="genre">What Books Genre are you interested in (if multiple, please separate them with a comma)? </label>
             <input type="text" step="any" name="book genre" id="genre" value={{ genre | default ("fiction", true) }} required="required"/><br>
 
-            <label for="author">Who are some Authors within the genre that you love (if multiple, please separate them with a comma)? [Type 'skip' to skip this question]</label>
+            <label for="author">Who are some Authors within the genre that you love, please enter full name like 'Stephen King' (if multiple, please separate them with a comma)? [Type 'skip' to skip this question]</label>
             <input type="text" step="any" name="book author" id="author" value={{ author }} ><br>
 
-            <label for="narrator">Who are some narrators within the genre that you love (if multiple, please separate them with a comma)? [Type 'skip' to skip this question]</label>
+            <label for="narrator">Who are some narrators within the genre that you love please enter full name like 'Scott Brick'(if multiple, please separate them with a comma)? [Type 'skip' to skip this question]</label>
             <input type="text" step="any" name="book narrator" id="narrator" value={{ narrator }} ><br>
 
             <button type="submit">Recommend</button>
