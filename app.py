@@ -85,7 +85,7 @@ def recommend():
     # creating a Series with the similarity scores in descending order
     score_series = pd.Series(cosine_sim2[idx]).sort_values(ascending=False)
     # getting the indexes of the 10 most similar movies
-    top_5_indexes = list(score_series.iloc[0:5].index)
+    top_5_indexes = list(score_series.iloc[1:6].index)
     print(top_5_indexes)
     # populating the list with the titles of the best 10 matching movies
     for i in top_5_indexes:
