@@ -93,7 +93,7 @@ def recommend():
     recommend_str = ', '.join(recommendation_movies)
 
     return render_template('index.html',
-                           recommendation_text=('Here are some audiobooks for you: ', recommend_str),
+                           recommendation_text='Here are some audiobooks for you: ', recommend_str,
                            genre=request.form["book genre"],
                            author=request.form["book author"],
                            narrator=request.form["book narrator"])
