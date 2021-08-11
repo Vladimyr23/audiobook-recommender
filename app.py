@@ -90,9 +90,10 @@ def recommend():
     # populating the list with the titles of the best 10 matching movies
     for i in top_5_indexes:
         recommendation_movies.append(list(audible_data.index)[i])
+    recommend_str = ', '.join(recommendation_movies)
 
     return render_template('index.html',
-                           recommendation_text=('Here are some audiobooks for you: ', recommendation_movies),
+                           recommendation_text=('Here are some audiobooks for you: ', recommend_str),
                            genre=request.form["book genre"],
                            author=request.form["book author"],
                            narrator=request.form["book narrator"])

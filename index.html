@@ -9,7 +9,7 @@
         <h1>An NLP powered audiobook recommender</h1>
 
         <form action="{{ url_for('recommend') }}" method="post">
-            <label for="genre">What Books Genre are you interested in (if multiple, please separate them with a comma)? </label>
+            <label for="genre">What Books Genre are you interested in (if multiple, please separate them with a comma)? [Type 'skip' to skip this question]</label>
             <input type="text" step="any" name="book genre" id="genre" value={{ genre | default ("fiction", true) }} required="required"/><br>
 
             <label for="author">Who are some Authors within the genre that you love, please enter full name like 'Stephen King' (if multiple, please separate them with a comma)? [Type 'skip' to skip this question]</label>
